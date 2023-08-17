@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:id="@+id/personal_test_personality_trail_coordinatorLayout"
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true">
+
+            <com.google.android.material.appbar.AppBarLayout
+                android:id="@+id/appBarLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fitsSystemWindows="true"
+                tools:keep="true">
+
+                <com.google.android.material.appbar.CollapsingToolbarLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    app:collapsedTitleTextColor="@color/white"
+                    app:contentScrim="@color/color_base_app_2"
+                    app:expandedTitleMargin="20dp"
+                    app:expandedTitleTextColor="@color/white"
+                    app:layout_scrollFlags="scroll|exitUntilCollapsed"
+                    app:maxLines="3"
+                    app:statusBarScrim="@color/color_base_app_2"
+                    app:title="Rasgos de la personalidad">
+
+                    <ImageView
+                        android:id="@+id/personal_test_personality_trail_image"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:alpha="0.65"
+                        android:fitsSystemWindows="true"
+                        android:scaleType="centerCrop"
+                        app:layout_collapseMode="parallax"
+                        app:url="@{`https://www.civitatis.com/f/turquia/esmirna/galeria/biblioteca-celso-efeso.jpg`}" />
+
+                    <androidx.appcompat.widget.Toolbar
+                        android:id="@+id/personal_test_personality_trail_toolbar"
+                        android:layout_width="match_parent"
+                        android:layout_height="?attr/actionBarSize"
+                        android:ellipsize="none"
+                        app:collapsedTitleGravity="center_horizontal"
+                        app:navigationIcon="@drawable/ic_arrow_back"
+                        app:expandedTitleGravity="center_horizontal"></androidx.appcompat.widget.Toolbar>
+
+                </com.google.android.material.appbar.CollapsingToolbarLayout>
+                <ProgressBar
+                    android:id="@+id/progressIndicator"
+                    style="@style/ProgressIndicatorStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </com.google.android.material.appbar.AppBarLayout>
+
+            <androidx.core.widget.NestedScrollView
+                android:id="@+id/personal_test_personality_trail_branch_scrollview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="70dp"
+                        android:layout_gravity="center"
+                        android:layout_marginHorizontal="25dp"
+                        android:gravity="center"
+                        android:text="Indica cuáles son tus temas de interés"
+                        android:textSize="18dp"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginHorizontal="25dp"
+                        android:gravity="center"
+                        android:text="Extraversión"
+                        android:textSize="18dp"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginHorizontal="25dp"
+                        android:gravity="center"
+                        android:text="La extraversión tiene que ver con el grado en el que el sujeto esta abierto con los demás, es decir, analiza cuánto le agrada a un sujeto estar rodeado de los demás."
+                        android:textSize="18dp"/>
+
+                    <com.google.android.material.chip.ChipGroup
+                        android:id="@+id/chipGroupExtraversion"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginHorizontal="22dp" >
+
+                    </com.google.android.material.chip.ChipGroup>
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+                        android:layout_marginHorizontal="25dp"
+                        android:gravity="center"
+                        android:text="Asertivo"
+                        android:textSize="18dp">
+
+                    </TextView>
+
+                    <com.google.android.material.chip.ChipGroup
+                        android:id="@+id/chipGroupAgreeableness"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginHorizontal="22dp"></com.google.android.material.chip.ChipGroup>
+
+                    <com.google.android.material.chip.ChipGroup
+                        android:id="@+id/chipGroupConscientiousness"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginHorizontal="22dp"></com.google.android.material.chip.ChipGroup>
+
+                    <com.google.android.material.chip.ChipGroup
+                        android:id="@+id/chipGroupEmotionalStability"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginHorizontal="22dp"></com.google.android.material.chip.ChipGroup>
+                </LinearLayout>
+            </androidx.core.widget.NestedScrollView>
+
+
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+        <Button
+            android:id="@+id/btnContinue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="0dp"
+            android:background="@color/color_base_app"
+            android:shadowColor="@color/color_base_app"
+            android:text="Continuar"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"></Button>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

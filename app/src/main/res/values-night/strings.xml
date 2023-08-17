@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="unknown_host_exception_error">There is no Internet</string>
+    <string name="arts_and_humanities">Artes y humanidades</string>
+    <string name="engineering_and_architecture">Ingenieria y arquitectura</string>
+</resources>

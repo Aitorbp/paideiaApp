@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/main_dest">
+
+
+    <fragment
+        android:id="@+id/main_dest"
+        android:name="com.example.paideiaapp.ui.main.MainFragment"
+        android:label="MainFragment"
+        tools:layout="@layout/fragment_main">
+        <action
+            android:id="@+id/action_main_dest_to_personalTestFragment"
+            app:destination="@id/personalTestFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/personalTestFragment"
+        android:name="com.example.paideiaapp.ui.personalTest.BranchKnowledge.PersonalTestBranchKnowledgeFragment"
+        android:label="fragment_personal_test"
+        tools:layout="@layout/fragment_personal_test_branchknow_ledge" >
+        <action
+            android:id="@+id/action_personalTestFragment_to_personalTestInterestsFragment"
+            app:destination="@id/personalTestInterestsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/personalTestInterestsFragment"
+        android:name="com.example.paideiaapp.ui.personalTest.interests.PersonalTestInterestsFragment"
+        android:label="fragment_personal_test_interests"
+        tools:layout="@layout/fragment_personal_test_interests" >
+        <action
+            android:id="@+id/action_personalTestInterestsFragment_to_personalTestPersonalityTrails"
+            app:destination="@id/personalTestPersonalityTrails" />
+    </fragment>
+    <fragment
+        android:id="@+id/personalTestPersonalityTrails"
+        android:name="com.example.paideiaapp.ui.personalTest.personalityTrails.PersonalTestPersonalityTrails"
+        android:label="PersonalTestPersonalityTrails" >
+        <action
+            android:id="@+id/action_personalTestPersonalityTrails_to_typeWorkFragment"
+            app:destination="@id/typeWorkFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/typeWorkFragment"
+        android:name="com.example.paideiaapp.ui.personalTest.typeWork.PerosnalTestTypeWorkFragment"
+        android:label="typeWorkFragment" />
+
+
+</navigation>

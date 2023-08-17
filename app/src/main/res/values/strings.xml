@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">paideiaApp</string>
+    <string name="unknown_error">There was an error</string>
+    <string name="unknown_host_exception_error">There is no Internet</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="personal_test_science_sport">Ciencias del deporte</string>
+    <string name="personal_test_arts_and_humanities">Artes y humanidades</string>
+    <string name="personal_test_engineering_and_architecture">Ingenieria y arquitectura</string>
+    <string name="personal_test_social_and_legal_sciences">Ciencias sociales y jurídicas</string>
+    <string name="personal_test_health_sciences">Ciencias de la salud</string>
+    <string name="personal_test_not_definided">Sin definir</string>
+</resources>
